@@ -24,4 +24,5 @@ jobs:
       - name: Copy Repository Files to Remote Server
         run: |
           cd ${{ github.workspace }}
-          scp -i ~/private-key.pem -r ./* ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }}:/home/${{ secrets.REMOTE_USER }} echo "Copied Repository Files"
+          scp -i ~/private-key.pem -r ./* ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }}:/home/${{ secrets.REMOTE_USER }} 
+          echo "Copied Repository Files"
